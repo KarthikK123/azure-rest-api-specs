@@ -250,6 +250,108 @@
         }
       }
     },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/namespaces/{namespaceName}": {
+      "get": {
+        "tags": [
+          "Namespace"
+        ],
+        "description": "Gets details of the Namespace.",
+        "operationId": "Namespaces_Get",
+        "x-ms-examples": {
+          "Get Namespace": {
+            "$ref": "./examples/GetNamespace.json"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterRpParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterResourceNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterNameParameter"
+          },
+          {
+            "$ref": "#/parameters/NamespaceNameParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Namespace"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        }
+      }
+    },
+    "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/namespaces": {
+      "get": {
+        "tags": [
+          "Namespace"
+        ],
+        "description": "List all Namespaces.",
+        "operationId": "Namespaces_List",
+        "x-ms-examples": {
+          "List Namespace": {
+            "$ref": "./examples/ListNamespace.json"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/parameters/SubscriptionIdParameter"
+          },
+          {
+            "$ref": "#/parameters/ResourceGroupNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterRpParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterResourceNameParameter"
+          },
+          {
+            "$ref": "#/parameters/ClusterNameParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v2/types.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/NamespaceList"
+            }
+          },
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "#/definitions/ErrorResponse"
+            }
+          }
+        },
+        "x-ms-pageable": {
+          "nextLinkName": "nextLink"
+        }
+      }
+    },
     "/providers/Microsoft.KubernetesConfiguration/operations": {
       "get": {
         "tags": [
@@ -532,6 +634,74 @@
         }
       }
     },
+    "Namespace": {
+      "description": "The Namespace object returned by Get calls",
+      "properties": {
+        "properties":{
+          "type": "object",
+          "x-ms-client-flatten": true,
+          "properties":{
+            "Name":{
+              "type": "string"
+            },
+            "UID":{
+              "type":"string"
+            },
+            "CreationTimestamp":{
+              "type":"Time"
+            },
+            "DeletionTimestamp":{
+              "type":"Time"
+            },
+            "ResourceVersion":{
+              "type":"string"
+            },
+            "Labels":{
+              "type":"object",
+              "additionalProperties":{
+                "type":"string"
+              }
+            },
+            "Annotations":{
+              "type":"object",
+              "additionalProperties":{
+                "type":"string"
+              }
+            },
+            "Status":{
+              "type":"string"
+            }
+          }
+        },
+        "systemData":{
+          "description": "System metadata recommended for all azure objects",
+          "ref" : "../../../../../common-types/resource-management/v2/types.json#/definitions/systemData"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/ProxyResource"
+        }
+      ]
+    },
+    "NamespaceList":{
+      "description": "List of namespaces returned",
+      "properties":{
+        "value":{
+          "type":"array",          
+          "readOnly": true,
+          "items": {
+            "$ref": "#/definitions/SourceControlConfiguration"
+          },
+          "description": "List of Namespaces within a Kubernetes cluster."
+        },
+        "nextLink": {
+          "type": "string",
+          "readOnly": true,
+          "description": "URL to get the next set of Namespace objects, if any."
+        }
+      }
+    },
     "ResourceProviderOperation": {
       "description": "Supported operation of this resource provider.",
       "readOnly": true,
@@ -642,6 +812,13 @@
       "required": true,
       "type": "string",
       "x-ms-parameter-location": "method"
+    },
+    "NamespaceNameParameter":{
+      "name": "namespaceName",
+      "in": "path",
+      "description": "Name of the namespace",
+      "required": true,
+      "type": "string"
     }
   }
 }
