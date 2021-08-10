@@ -17,10 +17,10 @@
           "type": "Microsoft.KubernetesConfiguration/namespaces",
           "name": "testns",
           "systemData": {
-            "createdBy": "string",
+            "createdBy": "ClusterConfigToAKS",
             "createdByType": "Application",
             "createdAt": "2020-09-08T05:10:57.027Z",
-            "lastModifiedBy": "string",
+            "lastModifiedBy": "ClusterConfigToAKS",
             "lastModifiedByType": "Application",
             "lastModifiedAt": "2020-09-08T05:10:57.027Z"
           },
