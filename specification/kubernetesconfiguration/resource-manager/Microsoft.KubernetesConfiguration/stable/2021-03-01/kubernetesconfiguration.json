@@ -641,17 +641,16 @@
           "type": "object",
           "x-ms-client-flatten": true,
           "properties":{
-            "Name":{
-              "type": "string"
-            },
             "UID":{
               "type":"string"
             },
             "CreationTimestamp":{
-              "type":"Time"
+              "type":"string",
+              "format": "date-time"
             },
             "DeletionTimestamp":{
-              "type":"Time"
+              "type":"string",
+              "format": "date-time"
             },
             "ResourceVersion":{
               "type":"string"
@@ -670,6 +669,12 @@
             },
             "Status":{
               "type":"string"
+            },
+            "PortalFQDN":{
+              "type": "string"
+            },
+            "AADProfileEnabled":{
+              "type":"boolean"
             }
           }
         },
