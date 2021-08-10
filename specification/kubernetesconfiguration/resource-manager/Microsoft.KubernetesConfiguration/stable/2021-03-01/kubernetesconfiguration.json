@@ -691,7 +691,7 @@
           "type":"array",          
           "readOnly": true,
           "items": {
-            "$ref": "#/definitions/SourceControlConfiguration"
+            "$ref": "#/definitions/Namespace"
           },
           "description": "List of Namespaces within a Kubernetes cluster."
         },
