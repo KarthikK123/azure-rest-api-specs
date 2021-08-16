@@ -252,9 +252,6 @@
     },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/namespaces/{namespaceName}": {
       "get": {
-        "tags": [
-          "Namespace"
-        ],
         "description": "Gets details of the Namespace.",
         "operationId": "Namespaces_Get",
         "x-ms-examples": {
@@ -303,9 +300,6 @@
     },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/namespaces": {
       "get": {
-        "tags": [
-          "Namespace"
-        ],
         "description": "List all Namespaces.",
         "operationId": "Namespaces_List",
         "x-ms-examples": {
