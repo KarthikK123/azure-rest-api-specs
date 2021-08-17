@@ -1,0 +1,73 @@
+{
+    "parameters": {
+      "subscriptionId": "subId1",
+      "resourceGroupName": "rg1",
+      "clusterRp": "Microsoft.Kubernetes",
+      "clusterResourceName": "connectedClusters",
+      "api-version": "2021-03-01",
+      "clusterName": "clusterName1"
+    },
+    "responses": {
+      "200": {
+        "body": {
+          "value": [
+            {
+              "id": "/subscriptions/subId1/resourceGroups/rg1/providers/Microsoft.Kubernetes/connectedClusters/clusterName1/providers/Microsoft.KubernetesConfiguration/namespaces/test1",
+              "type": "Microsoft.KubernetesConfiguration/namespaces",
+              "name": "test1",
+              "systemData": {
+                "createdBy": "ClusterConfigToAKS",
+                "createdByType": "Application",
+                "createdAt": "2020-09-08T05:10:57.027Z",
+                "lastModifiedBy": "ClusterConfigToAKS",
+                "lastModifiedByType": "Application",
+                "lastModifiedAt": "2020-09-08T05:10:57.027Z"
+              },
+              "properties": {
+                "Name": "test1",
+                "ResourceVersion": "1234",
+                "UID": "123-234-53413525",
+                "CreationTimestamp": "2020-09-08T05:10:57.027Z",
+                "DeletionTimestamp": "",
+                "Labels":{
+                    "k1":"v1"
+                },
+                "Annotations":{
+                    "k1":"v1"
+                },
+                "Status": "Active"
+              }
+            },
+            {
+              "id": "/subscriptions/subId1/resourceGroups/rg1/providers/Microsoft.Kubernetes/connectedClusters/clusterName1/providers/Microsoft.KubernetesConfiguration/namespaces/test2",
+              "type": "Microsoft.KubernetesConfiguration/namespaces",
+              "name": "test2",
+              "systemData": {
+                "createdBy": "ClusterConfigToAKS",
+                "createdByType": "Application",
+                "createdAt": "2020-09-08T05:10:57.027Z",
+                "lastModifiedBy": "ClusterConfigToAKS",
+                "lastModifiedByType": "Application",
+                "lastModifiedAt": "2020-09-08T05:10:57.027Z"
+              },
+              "properties": {
+                "Name": "test2",
+                "ResourceVersion": "1234",
+                "UID": "123-234-53413525",
+                "CreationTimestamp": "2020-09-08T05:10:57.027Z",
+                "DeletionTimestamp": "",
+                "Labels":{
+                    "k1":"v1"
+                },
+                "Annotations":{
+                    "k1":"v1"
+                },
+                "Status": "Active"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+  
