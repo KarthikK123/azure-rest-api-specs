@@ -24,7 +24,6 @@
                 "lastModifiedAt": "2020-09-08T05:10:57.027Z"
               },
               "properties": {
-                "Name": "test1",
                 "ResourceVersion": "1234",
                 "UID": "123-234-53413525",
                 "CreationTimestamp": "2020-09-08T05:10:57.027Z",
@@ -51,7 +50,6 @@
                 "lastModifiedAt": "2020-09-08T05:10:57.027Z"
               },
               "properties": {
-                "Name": "test2",
                 "ResourceVersion": "1234",
                 "UID": "123-234-53413525",
                 "CreationTimestamp": "2020-09-08T05:10:57.027Z",
